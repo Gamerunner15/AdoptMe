@@ -1,0 +1,46 @@
+<template>
+  <div id="app">
+    <router-view/>
+  </div>
+</template>
+
+<style lang="scss">
+$color-red: #EF3E42;
+$color-blue: #332982;
+$color-gray: #777;
+
+// Font families can be obtained from:
+// https://fonts.google.com/?query=open&selection.family=Open+Sans+Condensed:300|Open+Sans:400,700
+// <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700" rel="stylesheet">
+$font-family-primary: 'Open Sans', sans-serif;
+$font-family-secondary: 'Open Sans Condensed', sans-serif;
+
+$font-size-h1: 60px;
+$font-family-h1: $font-family-primary;
+$font-weight-h1: 300;
+
+$font-size-h2: 20px;
+$font-family-h2: $font-family-secondary;
+$font-weight-h2: bold;
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
+}
+</style>
