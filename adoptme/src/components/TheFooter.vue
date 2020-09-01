@@ -1,6 +1,6 @@
 <template>
   <div>
-      <header>
+      <footer>
           <div id="left">
               <img id="logo" src="..\assets\logo.png" alt="Puppy Logo">
               <h1 id="title">Adoptme.Org</h1>
@@ -10,13 +10,11 @@
               <a class="menu-button" id="who-we-are" href="#">Who We Are</a>
               <a class="menu-button" id="adoption-events" href="#">Adoption Events</a>
           </div>
-      </header>
-      <div id="banner">
-          <img id="dogs" src="..\assets\dogs.jpg" alt="Puppy Logo">
-          <div id="banner-text">
-            <h1>This is your new family!</h1>
-            <a id="adopt-now" href="#">ADOPT NOW</a>
-          </div>
+      </footer>
+      <div class="column">
+          <p id="address">1234 Main St. #4321<br>Amazing City, 45677</p>
+          <p id="phone">Customer Support (Monday-Friday | 8AM - 4PM Eastern) <br>1-800-444-5566</p>
+          <p>Some images were taken from unsplash</p>
       </div>
   </div>
 </template>
@@ -34,11 +32,11 @@ $color-gray: #777;
 $font-family-primary: 'Open Sans', sans-serif;
 $font-family-secondary: 'Open Sans Condensed', sans-serif;
 
-header {
-    background-color: $color-red;
+footer {
+    background-color: $color-blue;
     display: flex;
     flex-direction: row;
-    height: 100px;
+    height: 150px;
     align-content: center;
     justify-content: space-between;
 }
@@ -96,29 +94,16 @@ padding-left: 10px;
     flex: 3;
 }
 
-#banner {
-    height: 600px;
-}
-
-#banner-text {
+.column {
     color: white;
     display: flex;
     flex-direction: column;
-    margin-top: -150px;
-    align-items: flex-start;
-    padding-left: 50px;
-    a {
-        text-decoration: none;
-        color: white;
-        border-style: solid;
-        padding: 10px;
-        width: 150px;
+    height: 150px;
+    background-color: $color-blue;
+    text-align: left;
+    padding-left: 180px;
+    p {
+        padding-bottom: 20px;
     }
-}
-
-#dogs {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 </style>

@@ -12,6 +12,7 @@ $color-gray: #777;
 // Font families can be obtained from:
 // https://fonts.google.com/?query=open&selection.family=Open+Sans+Condensed:300|Open+Sans:400,700
 // <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700" rel="stylesheet">
+
 $font-family-primary: 'Open Sans', sans-serif;
 $font-family-secondary: 'Open Sans Condensed', sans-serif;
 
@@ -22,6 +23,9 @@ $font-weight-h1: 300;
 $font-size-h2: 20px;
 $font-family-h2: $font-family-secondary;
 $font-weight-h2: bold;
+* {
+  margin: 0;
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
