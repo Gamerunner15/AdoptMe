@@ -2,20 +2,20 @@
   <div class="container">
     <div class="body-row">
       <div id="volunteers">
-        <h1 class="subsection-title" id="volunteer-title">VOLUNTEERS</h1>
+        <h2 class="subsection-title" id="volunteer-title">VOLUNTEERS</h2>
         <img id="girl" src="../assets/girl.png" />
         <p>Amazing people, making the difference every single day. Join us now and be part of a community that is changing the world.</p>
-        <a id="join-us" href="#">JOIN US</a>
+        <a id="join-us" href="#"><h2>JOIN US</h2></a>
       </div>
       <div id="testimonial">
-        <h1 class="subsection-title" id="testimonial-title">TESTIMONIAL OF THE MONTH</h1>
+        <h2 class="subsection-title" id="testimonial-title">TESTIMONIAL OF THE MONTH</h2>
         <img id="video-image" src="../assets/testimonial.jpg" />
       </div>
     </div>
     <div class="body-row">
-      <tabbed-articles />
+      <tabbed-articles id="tabs" />
       <div id="friend">
-        <img src="https://api-lunacy.icons8.com/api/assets/0dd926a4-11ea-4c3e-9a61-60407f7ce56d/dog.png">
+        <img src="..\assets\dog.png">
       </div>
     </div>
   </div>
@@ -45,6 +45,7 @@ $font-family-secondary: 'Open Sans Condensed', sans-serif;
   align-content: center;
   width: 80%;
   margin-left: 10%;
+  margin-bottom: 10%;
 }
 
 .body-row {
@@ -52,7 +53,7 @@ $font-family-secondary: 'Open Sans Condensed', sans-serif;
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: bottom;
+  justify-content: space-between;
   align-items: flex-start;
   height: 500px;
 }
@@ -74,17 +75,6 @@ $font-family-secondary: 'Open Sans Condensed', sans-serif;
   img {
     width: 100%;
   }
-  a {
-        text-decoration: none;
-        color: $color-blue;
-        border-style: solid;
-        padding: 10px;
-        width: 150px;
-        float: left;
-        margin-top: 30px;
-        margin-left: 20px;
-        margin-bottom: 20px;
-    }
 }
 
 #testimonial {
@@ -99,7 +89,7 @@ $font-family-secondary: 'Open Sans Condensed', sans-serif;
     object-fit: cover;
     object-position: 0px, 30%;
   }
-  h1 {
+  h2 {
     border-color: $color-red;
     background-color: $color-red;
   }
@@ -117,9 +107,55 @@ $font-family-secondary: 'Open Sans Condensed', sans-serif;
   text-align: left;
 }
 
+#tabs {
+  flex: 1;
+  flex-grow: 3;
+}
+
 #friend {
+  flex-grow: 1;
   flex: 2;
-  margin-left: 200px;
+}
+
+//Small Screens
+@media screen and (max-width: 900px) {
+
+    #join-us {
+        text-align: center;
+        text-decoration: none;
+        color: $color-blue;
+        border-style: solid;
+        padding: 10px;
+        width: 75px;
+        float: left;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    #friend {
+      display: none;
+    }
+}
+//Large Screens
+@media screen and (min-width: 900px) {
+
+    #join-us {
+        text-align: center;
+        text-decoration: none;
+        color: $color-blue;
+        border-style: solid;
+        padding: 10px;
+        width: 150px;
+        float: left;
+        margin-top: 30px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+//Tiny Screens
+@media screen and (max-width: 400px) {
+
 }
 
 </style>

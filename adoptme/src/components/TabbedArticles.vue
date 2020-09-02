@@ -1,25 +1,25 @@
 <template>
   <div>
-      <div>
+      <div id="container">
         <div class="tabs">
-          <button v-on:click="openTab(1)" v-bind:class="{'tablink':true, 'active':(activeTab == 1)}">PROGRAMS</button>
-          <button v-on:click="openTab(2)" v-bind:class="{'tablink':true, 'active':(activeTab == 2)}">ASSOCIATED COMPANIES</button>
+            <button v-on:click="openTab(1)" v-bind:class="{'tablink':true, 'active':(activeTab == 1)}"><h2>PROGRAMS</h2></button>
+            <button v-on:click="openTab(2)" v-bind:class="{'tablink':true, 'active':(activeTab == 2)}"><h2>ASSOCIATED COMPANIES</h2></button>
         </div>
         <div id="programs" v-if="activeTab == 1" class="tabcontent">
           <div class="article">
-            <img src="https://api-lunacy.icons8.com/api/assets/cc5ee286-2748-4f1f-85e1-11bd9d5a33ff/Group 4.png">
+            <img src="..\assets\friend-in-trouble.png">
               <div class="articletext">
-                <h3>Behavior Program</h3>
+                <h2>Behavior Program</h2>
                 <p>Evaluation of each dog using specialists who determine the best training that will help you friend be a better family member.</p>
-                <a class="read-more" href="#">READ MORE</a>
+                <a class="read-more" href="#"><h3>READ MORE</h3></a>
               </div>
           </div>
           <div class="article">
-            <img src="https://api-lunacy.icons8.com/api/assets/a762f8cb-b87e-4ca6-b7e8-e8a051608fc7/family.png">
+            <img src="..\assets\family.png">
               <div class="articletext">
-                <h3>My Next Family</h3>
+                <h2>My Next Family</h2>
                 <p>Are you looking for a new family member? Then, this program is for you. Don’t buy, adopt here, and let’s give a home to this amazing friends.</p>
-                <a class="read-more" href="#">READ MORE</a>
+                <a class="read-more" href="#"><h3>READ MORE</h3></a>
               </div>
           </div>
         </div>
@@ -29,7 +29,7 @@
               <div class="articletext">
                 <h3>Base22</h3>
                 <p>Evaluation of each dog using specialists who determine the best training that will help you friend be a better family member.</p>
-                <a class="read-more" href="https://www.techelevator.com/">LEARN MORE</a>
+                <a class="read-more" href="https://www.techelevator.com/"><h3>LEARN MORE</h3></a>
               </div>
           </div>
           <div class="article">
@@ -37,7 +37,7 @@
               <div class="articletext">
                 <h3>Tech Elevator</h3>
                 <p>This webpage brought to you by Tech Elevator Columbus, a coding BootCamp for the future.</p>
-                <a class="read-more" href="#" target="_blank">LEARN MORE</a>
+                <a class="read-more" href="#" target="_blank"><h3>LEARN MORE</h3></a>
               </div>
           </div>
         </div>
@@ -85,14 +85,15 @@ a {
   flex-direction: row;
   padding-bottom: 20px;
   .read-more {
+    font-size: 20px;
     text-align: center;
-        text-decoration: none;
-        color: $color-red;
-        border-style: solid;
-        padding: 10px;
-        width: 150px;
-        float: left;
-        margin-top: 20px;
+    text-decoration: none;
+    color: $color-red;
+    border-style: solid;
+    padding: 5px;
+    width: 150px;
+    float: left;
+    margin-top: 10px;
     }
   img {
     width: 150px;
@@ -101,7 +102,8 @@ a {
   }
   .articletext {
     padding-left: 20px;
-    h3 {
+    width: 100%;
+    h2 {
       padding-bottom: 10px;
     }
   }
@@ -109,67 +111,32 @@ a {
 
 .tabs {
   font-family: $font-family-primary;
+  width: 100%;
   color: grey;
   overflow: hidden;
-  position: relative;
-  &:after {
-    content: ' ';
-    display: table;
-    clear: both;
+  margin-left: 12px;
+  margin-bottom: 10px;
+  .active {
+    color: $color-blue;
+    border-bottom: solid 10px $color-blue;
   }
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  &__tab {
+  button {
+    font-size: 20px;
+    background-color: inherit;
     float: left;
-    width: 50%;
-    text-align: center;
-    &:first-child.active ~ .Tabs__presentation-slider {
-      transform: translateX(0) scaleX(0.333);
-    }
-    &:nth-child(2).active ~ .Tabs__presentation-slider {
-      transform: translateX(33.333%) scaleX(0.333);
-    }
-    &:nth-child(3).active ~ .Tabs__presentation-slider {
-      transform: translateX(calc(33.333% * 2)) scaleX(0.333);
-    }
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
   }
-  &__presentation-slider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #4A66F4;
-    transform-origin: 0 0;
-    transition: transform .25s;
+  button:hover {
+    background-color: #ddd;
+  }
+  button.active {
+    color: $color-blue;
   }
 }
-// .tabs {
-//   font-family: $font-family-primary;
-//   color: grey;
-//   overflow: hidden;
-//   .active {
-//     color: $color-blue;
-//     text-decoration: underline solid $color-blue;
-//   }
-//   button {
-//     font-size: 20px;
-//     background-color: inherit;
-//     float: left;
-//     border: none;
-//     outline: none;
-//     cursor: pointer;
-//     padding: 14px 16px;
-//     transition: 0.3s;
-//   }
-//   button:hover {
-//     background-color: #ddd;
-//   }
-//   button.active {
-//     color: $color-blue;
-//   }
-// }
 
 .tabcontent {
   padding: 6px 12px;
