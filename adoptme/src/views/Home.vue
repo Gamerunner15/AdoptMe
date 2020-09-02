@@ -1,22 +1,22 @@
 <template>
-  <div class="home">
-    <the-header />
-    <the-body />
-    <the-footer />
+  <div>
+    <new-header />
+    <new-body />
+    <new-footer />
   </div>
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader'
-import TheBody from '@/components/TheBody'
-import TheFooter from '@/components/TheFooter'
+import NewHeader from '@/components/NewHeader'
+import NewBody from '@/components/NewBody'
+import NewFooter from '@/components/NewFooter'
 
 export default {
   name: 'Home',
   components: {
-    TheHeader,
-    TheBody,
-    TheFooter
+    NewHeader,
+    NewBody,
+    NewFooter
   }
 }
 </script>

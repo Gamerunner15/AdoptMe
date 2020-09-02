@@ -1,6 +1,7 @@
 <template>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700" rel="stylesheet">
   <div id="app">
+    <new-header />
     <router-view/>
   </div>
 </template>
@@ -9,9 +10,6 @@
 $color-red: #EF3E42;
 $color-blue: #332982;
 $color-gray: #777;
-
-// Font families can be obtained from:
-// https://fonts.google.com/?query=open&selection.family=Open+Sans+Condensed:300|Open+Sans:400,700
 
 $font-family-primary: 'Open Sans Condensed', sans-serif;
 $font-family-secondary: 'Open Sans', sans-serif;
@@ -23,13 +21,15 @@ $font-weight-h1: 300;
 $font-size-h2: 20px;
 $font-family-h2: $font-family-secondary;
 $font-weight-h2: bold;
+
 * {
   margin: 0;
 }
 
 #app {
   h1 {
-    font-size: $font-size-h1;
+    color: white;
+    font-size: 40px;
     font-family: $font-family-h1;
     font-weight: $font-weight-h1;
   }
@@ -46,5 +46,26 @@ $font-weight-h2: bold;
   p {
     font-family: 'Open Sans';
   }
+}
+
+@media screen and (min-width: 900px) {
+#app {
+  h1 {
+    color: white;
+    font-size: $font-size-h1;
+    font-family: $font-family-h1;
+    font-weight: $font-weight-h1;
+  }
+  h2 {
+    font-size: $font-size-h2;
+    font-family: $font-family-h2;
+    font-weight: $font-weight-h2;
+  }
+  h3 {
+    font-size: 15px;
+    font-family: $font-family-h2;
+    font-weight: $font-weight-h2;
+  }
+}
 }
 </style>
