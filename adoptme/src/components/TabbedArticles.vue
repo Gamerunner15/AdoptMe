@@ -2,8 +2,8 @@
   <div>
       <div id="container">
         <div class="tabs">
-            <button v-on:click="openTab(1)" v-bind:class="{'tablink':true, 'active':(activeTab == 1)}"><h2>PROGRAMS</h2></button>
-            <button v-on:click="openTab(2)" v-bind:class="{'tablink':true, 'active':(activeTab == 2)}"><h2>ASSOCIATED COMPANIES</h2></button>
+            <button v-on:click="openTab(1)" v-bind:class="{'tablink':true, 'active':(activeTab == 1)}">PROGRAMS</button>
+            <button v-on:click="openTab(2)" v-bind:class="{'tablink':true, 'active':(activeTab == 2)}">ASSOCIATED COMPANIES</button>
         </div>
         <div id="programs" v-if="activeTab == 1" class="tabcontent">
           <div class="article">
@@ -27,7 +27,7 @@
            <div class="article">
             <img src="..\assets\base22.jpg">
               <div class="articletext">
-                <h3>Base22</h3>
+                <h2>Base22</h2>
                 <p>Evaluation of each dog using specialists who determine the best training that will help you friend be a better family member.</p>
                 <a class="read-more" href="https://www.techelevator.com/"><h3>LEARN MORE</h3></a>
               </div>
@@ -35,7 +35,7 @@
           <div class="article">
             <img src="..\assets\techelevator.jpg">
               <div class="articletext">
-                <h3>Tech Elevator</h3>
+                <h2>Tech Elevator</h2>
                 <p>This webpage brought to you by Tech Elevator Columbus, a coding BootCamp for the future.</p>
                 <a class="read-more" href="#" target="_blank"><h3>LEARN MORE</h3></a>
               </div>
@@ -66,8 +66,8 @@ export default {
 $color-red: #EF3E42;
 $color-blue: #332982;
 $color-gray: #777;
-$font-family-primary: 'Open Sans', sans-serif;
-$font-family-secondary: 'Open Sans Condensed', sans-serif;
+$font-family-primary: 'Open Sans Condensed', sans-serif;
+$font-family-secondary: 'Open Sans', sans-serif;
 
 a {
     text-decoration: none;
@@ -101,7 +101,7 @@ a {
     object-fit: cover;
   }
   .articletext {
-    padding-left: 20px;
+    padding-left: 10px;
     width: 100%;
     h2 {
       padding-bottom: 10px;
@@ -111,39 +111,29 @@ a {
 
 .tabs {
   font-family: $font-family-primary;
-  width: 100%;
-  color: grey;
   overflow: hidden;
-  margin-left: 12px;
+  margin-left: 35px;
   margin-bottom: 10px;
   .active {
     color: $color-blue;
     border-bottom: solid 10px $color-blue;
   }
   button {
-    font-size: 20px;
+    font-size: 15px;
+    font-family: $font-family-secondary;
+    font-weight: bold;
     background-color: inherit;
-    float: left;
     border: none;
     outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
   }
-  button:hover {
-    background-color: #ddd;
-  }
-  button.active {
-    color: $color-blue;
-  }
 }
 
 .tabcontent {
   padding: 6px 12px;
   border-top: none;
-}
-
-.tabcontent {
   animation: fadeEffect 1s;
 }
 

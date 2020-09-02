@@ -6,6 +6,16 @@
   </div>
 </template>
 
+<script>
+import NewHeader from '@/components/NewHeader'
+export default {
+  name: 'App',
+  components: {
+    NewHeader
+  }
+}
+</script>
+
 <style lang="scss">
 $color-red: #EF3E42;
 $color-blue: #332982;

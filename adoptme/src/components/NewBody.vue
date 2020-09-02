@@ -10,8 +10,7 @@
       <div id="volunteers">
         <h4 class="subsection-title" id="volunteer-title">VOLUNTEERS</h4>
         <img id="girl" src="../assets/girl.png" />
-        <p id="text-one">Amazing people, making the difference every single day.</p>
-        <p id="text-two">Join us now and be part of a community that is changing the world.</p>
+        <p id="text-one">Amazing people, making the difference every single day. Join us now and be part of a community that is changing the world.</p>
         <div id="box-div">
           <a id="join-us" class="box-button" href="#">JOIN US</a>
         </div>
@@ -33,12 +32,16 @@
 </template>
 
 <script>
+import TabbedArticles from '@/components/TabbedArticles'
 export default {
-  name: "new-body",
-  data() {
-    return {};
+  name: 'new-body',
+  components: {
+    TabbedArticles
   },
-};
+  data () {
+    return {}
+  }
+}
 </script>
 
 <style lang="scss">
@@ -81,22 +84,21 @@ $font-family-secondary: "Open Sans", sans-serif;
 }
 
 .body-row {
-  width: 100%;
-  height: 200px;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #volunteers {
-  flex-grow: 1;
-  width: 33%;
-  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   margin-right: 10px;
   margin-left: 10px;
+  padding-bottom: 15px;
   box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
   h4 {
     background-color: $color-blue;
@@ -120,29 +122,30 @@ $font-family-secondary: "Open Sans", sans-serif;
   padding-top: 2px;
   padding-bottom: 5px;
 }
-#text-two {
-  display: none;
-}
+
 #join-us {
   color: $color-blue;
   padding-top: 1px;
   padding-bottom: 1px;
-  margin-left: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-left: 20px;
 }
 
 #testimonial {
-  flex-grow: 2;
-  width: 66%;
-  box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
+  flex: 2;
+  margin-top: 20px;
   margin-right: 10px;
-  #video {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%;
-  }
+  box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
   h4 {
     background-color: $color-red;
+  }
+  #video {
+    position: relative;
+    background-color: grey;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 56.25%;
   }
 }
 .responsive-iframe {
@@ -174,7 +177,11 @@ $font-family-secondary: "Open Sans", sans-serif;
     width: 150px;
   }
   .body-row {
+    width: 100%;
     height: 450px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
   }
   .subsection-title {
     font-size: 30px;
@@ -184,6 +191,8 @@ $font-family-secondary: "Open Sans", sans-serif;
   #volunteers {
     margin-right: 40px;
     margin-left: 100px;
+    flex-grow: 1;
+    width: 33%;
   }
   #text-one {
     display: inline-block;
@@ -206,12 +215,18 @@ $font-family-secondary: "Open Sans", sans-serif;
     margin-left: 15px;
   }
   #testimonial {
+    margin-top: 0px;
     margin-right: 100px;
+    flex-grow: 2;
+    width: 66%;
     img {
       max-height: 500px;
       object-fit: cover;
       object-position: 0px, 30%;
     }
+  }
+  #friend {
+    display: inline-block;
   }
 }
 </style>

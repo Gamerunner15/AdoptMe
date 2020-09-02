@@ -139,6 +139,6 @@ $font-family-secondary: 'Open Sans', sans-serif;
     #logo {
     width: 80px;
     height: 80px;
-}
+    }
 }
 </style>

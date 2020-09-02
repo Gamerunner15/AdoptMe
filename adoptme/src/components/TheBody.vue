@@ -13,7 +13,7 @@
       </div>
     </div>
     <div class="body-row">
-      <tabbed-articles id="tabs" />
+      <!-- <tabbed-articles id="tabs" /> -->
       <div id="friend">
         <img src="..\assets\dog.png">
       </div>
