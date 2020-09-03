@@ -17,15 +17,15 @@
       </div>
       <div id="testimonial">
         <h4 class="subsection-title" id="testimonial-title">TESTIMONIAL OF THE MONTH</h4>
-        <div id="video">
-          <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <div class="video">
+          <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
     </div>
-    <div class="body-row">
+    <div class="body-row-2">
       <tabbed-articles id="tabs" />
       <div id="friend">
-        <img src="..\assets\dog.png" />
+        <img src="..\assets\cute-puppy.jpg" />
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@ $font-family-secondary: "Open Sans", sans-serif;
   width: 75px;
 }
 
-.body-row {
+.body-row, .body-row-2 {
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
@@ -137,16 +137,19 @@ $font-family-secondary: "Open Sans", sans-serif;
   margin-top: 20px;
   margin-right: 10px;
   box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
+  max-width: 800px;
   h4 {
     background-color: $color-red;
   }
-  #video {
+}
+.video iframe {
+    width:100%;
+}
+.video {
     position: relative;
-    background-color: grey;
-    width: 100%;
+    width:100%;
     overflow: hidden;
     padding-top: 56.25%;
-  }
 }
 .responsive-iframe {
   position: absolute;
@@ -180,8 +183,20 @@ $font-family-secondary: "Open Sans", sans-serif;
     width: 100%;
     height: 450px;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 100px;
+    margin-top: 40px;
+  }
+  .body-row-2 {
+    height: 450px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
   }
   .subsection-title {
     font-size: 30px;
@@ -193,18 +208,13 @@ $font-family-secondary: "Open Sans", sans-serif;
     margin-left: 100px;
     flex-grow: 1;
     width: 33%;
+    padding-bottom: 30px;
   }
   #text-one {
     display: inline-block;
     font-size: 20px;
     padding-left: 10px;
     padding-top: 10px;
-  }
-  #text-two {
-    display: inline-block;
-    font-size: 20px;
-    padding-left: 10px;
-    padding-bottom: 10px;
   }
   #join-us {
     padding-top: 5px;
@@ -217,7 +227,6 @@ $font-family-secondary: "Open Sans", sans-serif;
   #testimonial {
     margin-top: 0px;
     margin-right: 100px;
-    flex-grow: 2;
     width: 66%;
     img {
       max-height: 500px;
@@ -225,8 +234,19 @@ $font-family-secondary: "Open Sans", sans-serif;
       object-position: 0px, 30%;
     }
   }
+  #tabs {
+    padding-left: 30px;
+  }
   #friend {
+    padding-right: 30px;
     display: inline-block;
+    img {
+      height:400px;
+      width: 500px;
+      object-fit: cover;
+      object-position: 0px 0px;
+      filter: grayscale(100%);
+    }
   }
 }
 </style>

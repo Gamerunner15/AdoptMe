@@ -4,13 +4,13 @@
     <div class="header">
         <div id="left">
                 <img id="logo" src="..\assets\logo.png" alt="Puppy Logo">
-                <h1 id="title">Adoptme.Org</h1>
+                <h4 id="title">Adoptme.Org</h4>
         </div>
         <div id="right">
-                <img src="..\assets\Hamburger.png" id='hamburger' v-on:click="toggleMenu()">
-                <a class="menu-button" id="what-we-do" href="#"><h2>What We Do</h2></a>
-                <a class="menu-button" id="who-we-are" href="#"><h2>Who We Are</h2></a>
-                <a class="menu-button" id="adoption-events" href="#"><h2>Adoption Events</h2></a>
+                <img src="..\assets\down-caret.png" id='hamburger' v-on:click="toggleMenu()">
+                <a class="menu-button" href="#"><h2>What We Do</h2></a>
+                <a class="menu-button" href="#"><h2>Who We Are</h2></a>
+                <a class="menu-button" href="#"><h2>Adoption Events</h2></a>
         </div>
     </div>
     <div class="mobile-menu" v-if="showMenu">
@@ -58,7 +58,6 @@ $font-family-secondary: 'Open Sans', sans-serif;
     flex: 1;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
     background-color: $color-red;
     height: 100px;
     text-align: center;
@@ -73,14 +72,17 @@ $font-family-secondary: 'Open Sans', sans-serif;
     margin-left: 20px;
 }
 #logo {
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
 }
 .menu-button {
     display: none;
 }
 #title {
-    font-size: 40px;
+    color: white;
+    font-size: 30px;
+    font-family: $font-family-primary;
+    font-weight: 300;
     padding-left: 10px;
 }
 #hamburger {
@@ -115,13 +117,19 @@ $font-family-secondary: 'Open Sans', sans-serif;
     color: white;
     font-size: 15px;
     padding-bottom: 10px;
-    font-family: $font-family-primary;
+    font-family: $font-family-secondary;
+    font-weight: bold;
 }
 //Large Screens
 @media screen and (min-width: 900px) {
+    .header {
+        padding-right: 60px;
+        padding-left: 60px;
+        align-items: center;
+    }
     .menu-button {
         display: inline-block;
-        padding-right: 20px;
+        padding-right: 30px;
         text-decoration: none;
         color: white;
     }
@@ -136,9 +144,13 @@ $font-family-secondary: 'Open Sans', sans-serif;
         align-items: center;
         margin-right: 20px;
     }
+    #title {
+    font-size: 35px;
+    padding-left: 10px;
+}
     #logo {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     }
 }
 </style>

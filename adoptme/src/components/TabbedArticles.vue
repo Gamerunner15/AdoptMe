@@ -103,6 +103,7 @@ a {
   .articletext {
     padding-left: 10px;
     width: 100%;
+     max-width: 500px;
     h2 {
       padding-bottom: 10px;
     }
