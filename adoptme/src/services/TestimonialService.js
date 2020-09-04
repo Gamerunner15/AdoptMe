@@ -5,10 +5,12 @@ export default {
   getTestimonial () {
     axios.get('/fakeURL')
     const fakeMonth = Math.floor(Math.random() * 13)
-    if (fakeMonth < 6) {
-      return 'https://www.youtube.com/embed/_wWwbxWyDWA'
-    } else {
+    if (fakeMonth < 3) {
       return 'https://www.youtube.com/embed/c7D-TuJTK2M'
+    } else if (fakeMonth > 3 && fakeMonth < 6) {
+      return 'https://www.youtube.com/embed/jLGYZAur3y4'
+    } else {
+      return 'https://www.youtube.com/embed/_wWwbxWyDWA'
     }
   }
 }

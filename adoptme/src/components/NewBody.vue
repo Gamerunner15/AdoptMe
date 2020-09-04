@@ -3,30 +3,27 @@
     <div id="banner">
       <div id="banner-text">
         <h1>This is your new family!</h1>
-        <a id="adopt-now" class="box-button" href="/adopt/">ADOPT NOW</a>
+        <a id="adopt-now" class="box-button" href="/adopt/"><h3>ADOPT NOW</h3></a>
       </div>
     </div>
     <div class="body-row">
       <div id="volunteers">
-        <h4 class="subsection-title" id="volunteer-title">VOLUNTEERS</h4>
+        <h1 class="subsection-title" id="volunteer-title">VOLUNTEERS</h1>
         <img id="girl" src="../assets/girl.png" />
         <p id="text-one">Amazing people, making the difference every single day. Join us now and be part of a community that is changing the world.</p>
-        <div id="box-div">
-          <a id="join-us" class="box-button" href="#">JOIN US</a>
-        </div>
+        <a id="join-us" class="box-button" href="#"><h3>JOIN US</h3></a>
       </div>
       <div id="testimonial">
-        <h4 class="subsection-title" id="testimonial-title">TESTIMONIAL OF THE MONTH</h4>
+        <h1 class="subsection-title" id="testimonial-title">TESTIMONIAL OF THE MONTH</h1>
         <div class="video">
           <iframe class="responsive-iframe" width="560" height="315" v-bind:src="tesimonialOfTheMonth" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <!-- <iframe class="responsive-iframe" src="https://www.youtube.com/embed/jLGYZAur3y4" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
     <div class="body-row-2">
       <tabbed-articles id="tabs" />
       <div id="friend">
-        <img src="..\assets\cute-puppy.jpg" />
+        <img src="..\assets\cute-puppy-small.jpg" />
       </div>
     </div>
   </div>
@@ -56,8 +53,6 @@ export default {
 $color-red: #ef3e42;
 $color-blue: #332982;
 $color-gray: #777;
-$font-family-primary: "Open Sans Condensed", sans-serif;
-$font-family-secondary: "Open Sans", sans-serif;
 
 #banner {
   display: flex;
@@ -71,25 +66,22 @@ $font-family-secondary: "Open Sans", sans-serif;
 }
 #banner-text {
   background-color: rgba(0, 0, 0, 0.5);
-  font-size: 20px;
   color: white;
   display: flex;
   flex-direction: column;
   padding-top: 5px;
-  padding-left: 10px;
+  padding-left: 20px;
   padding-bottom: 10px;
+  .box-button {
+    color: white;
+  }
 }
 .box-button {
-  font-size: 10px;
-  font-family: $font-family-secondary;
-  font-weight: bold;
   text-align: center;
-  margin-top: 10px;
   text-decoration: none;
-  color: white;
   border-style: solid;
-  padding: 5px;
-  width: 75px;
+  padding: 3px;
+  max-width: 100px;
 }
 
 .body-row, .body-row-2 {
@@ -109,46 +101,40 @@ $font-family-secondary: "Open Sans", sans-serif;
   margin-left: 10px;
   padding-bottom: 15px;
   box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
-  h4 {
+  .subsection-title {
     background-color: $color-blue;
   }
   img {
     width: 100%;
   }
+  p {
+    padding-bottom: 10px;
+  }
+  .box-button {
+    margin-left: 20px;
+  }
 }
 .subsection-title {
   color: white;
   text-align: center;
-  font-size: 15px;
-  font-family: $font-family-secondary;
-  font-weight: bold;
   padding: 5px;
 }
 #text-one {
-  font-size: 12px;
   text-align: left;
   padding-left: 5px;
   padding-top: 2px;
   padding-bottom: 5px;
 }
 
-#join-us {
-  color: $color-blue;
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-left: 20px;
-}
-
 #testimonial {
   flex: 2;
   margin-top: 20px;
-  margin-right: 10px;
   box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
   max-width: 800px;
-  h4 {
+  .subsection-title {
     background-color: $color-red;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .video iframe {
@@ -178,12 +164,10 @@ $font-family-secondary: "Open Sans", sans-serif;
     height: 500px;
   }
   #banner-text {
-    font-size: 60px;
     padding-left: 40px;
     padding-bottom: 40px;
   }
   .box-button {
-    font-size: 20px;
     margin-top: 10px;
     padding: 5px;
     width: 150px;
@@ -198,7 +182,7 @@ $font-family-secondary: "Open Sans", sans-serif;
     margin-top: 40px;
   }
   .body-row-2 {
-    height: 450px;
+    height: 100%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -207,31 +191,16 @@ $font-family-secondary: "Open Sans", sans-serif;
     margin-right: 100px;
     box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.25);
   }
-  .subsection-title {
-    font-size: 30px;
-    padding: 10px;
-    height: 40px;
-  }
   #volunteers {
     margin-right: 40px;
     margin-left: 100px;
     flex-grow: 1;
     width: 33%;
-    padding-bottom: 30px;
   }
   #text-one {
     display: inline-block;
-    font-size: 20px;
     padding-left: 10px;
     padding-top: 10px;
-  }
-  #join-us {
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  #box-div {
-    margin-top: 15px;
-    margin-left: 15px;
   }
   #testimonial {
     margin-top: 0px;
@@ -250,10 +219,7 @@ $font-family-secondary: "Open Sans", sans-serif;
     padding-right: 30px;
     display: inline-block;
     img {
-      height:400px;
-      width: 500px;
-      object-fit: cover;
-      object-position: 0px 0px;
+      width: 100%;
       filter: grayscale(100%);
     }
   }

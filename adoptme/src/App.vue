@@ -20,61 +20,62 @@ export default {
 $color-red: #EF3E42;
 $color-blue: #332982;
 $color-gray: #777;
-
 $font-family-primary: 'Open Sans Condensed', sans-serif;
-$font-family-secondary: 'Open Sans', sans-serif;
-
-$font-size-h1: 60px;
-$font-family-h1: $font-family-primary;
+$font-family-secondary: 'Lora', serif;
+$font-family-tertiary: 'Open Sans', sans-serif;
 $font-weight-h1: 300;
-
-$font-size-h2: 20px;
-$font-family-h2: $font-family-secondary;
 $font-weight-h2: bold;
+$font-weight-h3: bold;
 
 * {
   margin: 0;
 }
 
 #app {
+  a {
+    text-decoration: none;
+  }
   h1 {
     color: white;
-    font-size: 40px;
-    font-family: $font-family-h1;
+    font-size: 30px;
+    font-family: $font-family-primary;
     font-weight: $font-weight-h1;
   }
   h2 {
-    font-size: $font-size-h2;
-    font-family: $font-family-h2;
+    font-size: 20px;
+    font-family: $font-family-primary;
     font-weight: $font-weight-h2;
   }
   h3 {
-    font-size: 15px;
-    font-family: $font-family-h2;
-    font-weight: $font-weight-h2;
+    font-size: 12px;
+    font-family: $font-family-tertiary;
+    font-weight: $font-weight-h3;
   }
   p {
-    font-family: 'Lora';
+    font-family: $font-family-secondary;
   }
 }
 
 @media screen and (min-width: 900px) {
 #app {
-  h1 {
+   h1 {
     color: white;
-    font-size: $font-size-h1;
-    font-family: $font-family-h1;
+    font-size: 40px;
+    font-family: $font-family-primary;
     font-weight: $font-weight-h1;
   }
   h2 {
-    font-size: $font-size-h2;
-    font-family: $font-family-h2;
+    font-size: 30px;
+    font-family: $font-family-primary;
     font-weight: $font-weight-h2;
   }
   h3 {
     font-size: 15px;
-    font-family: $font-family-h2;
-    font-weight: $font-weight-h2;
+    font-family: $font-family-tertiary;
+    font-weight: $font-weight-h3;
+  }
+  p {
+    font-family: $font-family-secondary;
   }
 }
 }

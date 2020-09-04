@@ -4,13 +4,13 @@
     </div>
     <div class="footer-content">
       <div id="top">
-        <img id="bottom-logo" src="..\assets\logo.png" alt="Puppy Logo" />
-        <h1 id="bottom-title">Adoptme.Org</h1>
+        <img src="..\assets\logo.png" alt="Puppy Logo" />
+        <h1>Adoptme.Org</h1>
       </div>
       <div id="bottom-menu">
-        <a class="bottom-button" href="#">What We Do</a>
-        <a class="bottom-button" href="#">Who We Are</a>
-        <a class="bottom-button" href="#">Adoption Events</a>
+        <a class="bottom-button" href="#"><h2>What We Do</h2></a>
+        <a class="bottom-button" href="#"><h2>Who We Are</h2></a>
+        <a class="bottom-button" href="#"><h2>Adoption Events</h2></a>
       </div>
       <div id="info">
         <p id="address">
@@ -46,8 +46,6 @@ export default {}
 $color-red: #ef3e42;
 $color-blue: #332982;
 $color-gray: #777;
-$font-family-primary: "Open Sans Condensed", sans-serif;
-$font-family-secondary: "Open Sans", sans-serif;
 .footer {
    background-color: $color-blue;
    height: 300px;
@@ -68,18 +66,14 @@ $font-family-secondary: "Open Sans", sans-serif;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-#bottom-logo {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  img {
   height: 40px;
   width: 40px;
   padding-left: 5px;
   padding-right: 5px;
-}
-
-#bottom-title {
-  font-family: $font-family-secondary;
-  color: white;
-  padding-left: 10px;
+  }
 }
 
 #bottom-menu {
@@ -87,14 +81,10 @@ $font-family-secondary: "Open Sans", sans-serif;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-}
-.bottom-button {
-  text-decoration: none;
-  color: white;
-  font-size: 15px;
-  padding-bottom: 10px;
-  font-family: $font-family-secondary;
-  font-weight: bold;
+  padding-top: 10px;
+  a {
+    color: white;
+  }
 }
 #info {
   margin: 20px;
@@ -120,15 +110,11 @@ $font-family-secondary: "Open Sans", sans-serif;
     align-content: flex-start;
     justify-content: space-evenly;
   }
-  #top {
-    align-items: flex-start;
-  }
   #bottom-menu {
     margin-top: 20px;
     align-items: flex-start;
   }
   .bottom-button {
-    font-size: 30px;
     padding-left: 60px;
   }
   #bottom-logo {
@@ -138,13 +124,11 @@ $font-family-secondary: "Open Sans", sans-serif;
     display: none;
   }
   #info-big {
-    margin-left: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
     padding-top: 50px;
-    display: inline-block;
     color: white;
-    p {
-      padding-bottom: 10px;
-    }
   }
 }
 //Small Screens

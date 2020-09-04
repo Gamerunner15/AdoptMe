@@ -4,7 +4,7 @@
     <div class="header">
         <div id="left">
                 <img id="logo" src="..\assets\logo.png" alt="Puppy Logo">
-                <h4 id="title">Adoptme.Org</h4>
+                <h1 id="title">Adoptme.Org</h1>
         </div>
         <div id="right">
                 <img src="..\assets\down-caret.png" id='hamburger' v-on:click="toggleMenu()">
@@ -15,9 +15,9 @@
     </div>
     <div class="mobile-menu" v-if="showMenu">
         <div class="button-row">
-            <a class="mobile-button" href="#">What We Do</a>
-            <a class="mobile-button" href="#">Who We Are</a>
-            <a class="mobile-button" href="#">Adoption Events</a>
+            <a class="mobile-button" href="#"><h2>What We Do</h2></a>
+            <a class="mobile-button" href="#"><h2>Who We Are</h2></a>
+            <a class="mobile-button" href="#"><h2>Adoption Events</h2></a>
         </div>
     </div>
 </div>
@@ -44,8 +44,6 @@ export default {
 $color-red: #EF3E42;
 $color-blue: #332982;
 $color-gray: #777;
-$font-family-primary: 'Open Sans Condensed', sans-serif;
-$font-family-secondary: 'Open Sans', sans-serif;
 
 .container {
     display: flex;
@@ -80,9 +78,6 @@ $font-family-secondary: 'Open Sans', sans-serif;
 }
 #title {
     color: white;
-    font-size: 30px;
-    font-family: $font-family-primary;
-    font-weight: 300;
     padding-left: 10px;
 }
 #hamburger {
@@ -115,10 +110,7 @@ $font-family-secondary: 'Open Sans', sans-serif;
 .mobile-button {
     text-decoration: none;
     color: white;
-    font-size: 15px;
     padding-bottom: 10px;
-    font-family: $font-family-secondary;
-    font-weight: bold;
 }
 //Large Screens
 @media screen and (min-width: 900px) {
@@ -145,7 +137,6 @@ $font-family-secondary: 'Open Sans', sans-serif;
         margin-right: 20px;
     }
     #title {
-    font-size: 35px;
     padding-left: 10px;
 }
     #logo {
@@ -156,7 +147,6 @@ $font-family-secondary: 'Open Sans', sans-serif;
 //Small Screens
 @media screen and (max-width: 400px) {
     .mobile-button {
-    font-size: 12px;
 }
 }
 </style>
