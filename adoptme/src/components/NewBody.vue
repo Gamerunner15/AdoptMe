@@ -76,6 +76,7 @@ $font-family-secondary: "Open Sans", sans-serif;
   display: flex;
   flex-direction: column;
   padding-top: 5px;
+  padding-left: 10px;
   padding-bottom: 10px;
 }
 .box-button {
