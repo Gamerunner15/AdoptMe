@@ -1,12 +1,12 @@
 <p align="center">
-<img src="adoptme/src/assets/logo.png" style="filter: brightness(0) saturate(100%);" alt="Logo" height="100" align="center">
+<img src="images/logo-black.png" style="filter: brightness(0) saturate(100%);" alt="Logo" height="100" align="center">
 </p>
 
 # Adoptme.Org - Landing Page for Pet Adoption Organization
 
 The FoxChat project is two things: the chatbot itself, designed around the Tech Elevator curriculum to help students get answers to questions they may have about academic topics as well as Pathway (interviews, job search, networking skills) topics, and the selling page, designed with expansion in mind and highlighting the ability to customize the chatbot to whatever business needs might find a chatbot useful. 
 
-<img src="adoptme/src/assets/desktop-image.png" alt="Landing Page" height="500">
+<img src="images/desktop-image.PNG" alt="Landing Page" height="500">
 
 ## Getting Started
 
@@ -39,7 +39,7 @@ npm run serve
 ## Usage
 
 * View it on a small screen for a unique mobile experience.
-<img src="adoptme/src/assets/mobile-screenshot.png" alt="Mobile Example" height="200">
+<img src="images/mobile-screenshot.PNG" alt="Mobile Example" height="400">
 
 
 ## Contributors
