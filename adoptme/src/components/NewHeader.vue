@@ -153,4 +153,10 @@ $font-family-secondary: 'Open Sans', sans-serif;
     height: 50px;
     }
 }
+//Small Screens
+@media screen and (max-width: 400px) {
+    .mobile-button {
+    font-size: 12px;
+}
+}
 </style>

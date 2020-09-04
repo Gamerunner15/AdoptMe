@@ -2,8 +2,8 @@
   <div>
     <div id="banner">
       <div id="banner-text">
-        <h4>This is your new family!</h4>
-        <a id="adopt-now" class="box-button" href="#">ADOPT NOW</a>
+        <h1>This is your new family!</h1>
+        <a id="adopt-now" class="box-button" href="/adopt/">ADOPT NOW</a>
       </div>
     </div>
     <div class="body-row">
@@ -18,7 +18,8 @@
       <div id="testimonial">
         <h4 class="subsection-title" id="testimonial-title">TESTIMONIAL OF THE MONTH</h4>
         <div class="video">
-          <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
+          <iframe class="responsive-iframe" width="560" height="315" v-bind:src="tesimonialOfTheMonth" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <!-- <iframe class="responsive-iframe" src="https://www.youtube.com/embed/jLGYZAur3y4" frameborder="0" allowfullscreen></iframe> -->
         </div>
       </div>
     </div>
@@ -33,13 +34,20 @@
 
 <script>
 import TabbedArticles from '@/components/TabbedArticles'
+import testimonialService from '@/services/TestimonialService.js'
+
 export default {
   name: 'new-body',
   components: {
     TabbedArticles
   },
   data () {
-    return {}
+    return {
+      tesimonialOfTheMonth: 'https://www.youtube.com/embed/jLGYZAur3y4'
+    }
+  },
+  created () {
+    this.tesimonialOfTheMonth = testimonialService.getTestimonial()
   }
 }
 </script>
@@ -62,13 +70,13 @@ $font-family-secondary: "Open Sans", sans-serif;
   height: 200px;
 }
 #banner-text {
+  background-color: rgba(0, 0, 0, 0.5);
   font-size: 20px;
-  font-family: $font-family-primary;
   color: white;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
-  padding-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
 .box-button {
   font-size: 10px;

@@ -1,5 +1,5 @@
 <template>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora&family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@700&display=swap" rel="stylesheet">
   <div id="app">
     <new-header />
     <router-view/>
@@ -54,7 +54,7 @@ $font-weight-h2: bold;
     font-weight: $font-weight-h2;
   }
   p {
-    font-family: 'Open Sans';
+    font-family: 'Lora';
   }
 }
 

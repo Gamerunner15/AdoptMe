@@ -1,47 +1,61 @@
 <template>
   <div>
-      <div id="container">
-        <div class="tabs">
-            <button v-on:click="openTab(1)" v-bind:class="{'tablink':true, 'active':(activeTab == 1)}">PROGRAMS</button>
-            <button v-on:click="openTab(2)" v-bind:class="{'tablink':true, 'active':(activeTab == 2)}">ASSOCIATED COMPANIES</button>
+    <div id="container">
+      <div class="tabs">
+        <button
+          v-on:click="openTab(1)"
+          v-bind:class="{'tablink':true, 'active':(activeTab == 1)}"
+        >PROGRAMS</button>
+        <button
+          v-on:click="openTab(2)"
+          v-bind:class="{'tablink':true, 'active':(activeTab == 2)}"
+        >ASSOCIATED COMPANIES</button>
+      </div>
+      <div id="programs" v-if="activeTab == 1" class="tabcontent">
+        <div class="article">
+          <img src="..\assets\friend-in-trouble.png" />
+          <div class="articletext">
+            <h2>Behavior Program</h2>
+            <p>Evaluation of each dog using specialists who determine the best training that will help you friend be a better family member.</p>
+            <a class="read-more" href="#">
+              <h3>READ MORE</h3>
+            </a>
+          </div>
         </div>
-        <div id="programs" v-if="activeTab == 1" class="tabcontent">
-          <div class="article">
-            <img src="..\assets\friend-in-trouble.png">
-              <div class="articletext">
-                <h2>Behavior Program</h2>
-                <p>Evaluation of each dog using specialists who determine the best training that will help you friend be a better family member.</p>
-                <a class="read-more" href="#"><h3>READ MORE</h3></a>
-              </div>
-          </div>
-          <div class="article">
-            <img src="..\assets\family.png">
-              <div class="articletext">
-                <h2>My Next Family</h2>
-                <p>Are you looking for a new family member? Then, this program is for you. Don’t buy, adopt here, and let’s give a home to this amazing friends.</p>
-                <a class="read-more" href="#"><h3>READ MORE</h3></a>
-              </div>
-          </div>
-        </div>
-        <div id="associated-companies" v-if="activeTab == 2" class="tabcontent">
-           <div class="article">
-            <img src="..\assets\base22.jpg">
-              <div class="articletext">
-                <h2>Base22</h2>
-                <p>Evaluation of each dog using specialists who determine the best training that will help you friend be a better family member.</p>
-                <a class="read-more" href="https://www.techelevator.com/"><h3>LEARN MORE</h3></a>
-              </div>
-          </div>
-          <div class="article">
-            <img src="..\assets\techelevator.jpg">
-              <div class="articletext">
-                <h2>Tech Elevator</h2>
-                <p>This webpage brought to you by Tech Elevator Columbus, a coding BootCamp for the future.</p>
-                <a class="read-more" href="#" target="_blank"><h3>LEARN MORE</h3></a>
-              </div>
+        <div class="article">
+          <img src="..\assets\family.png" />
+          <div class="articletext">
+            <h2>My Next Family</h2>
+            <p>Are you looking for a new family member? Then, this program is for you. Don’t buy, adopt here, and let’s give a home to this amazing friends.</p>
+            <a class="read-more" href="#">
+              <h3>READ MORE</h3>
+            </a>
           </div>
         </div>
       </div>
+      <div id="associated-companies" v-if="activeTab == 2" class="tabcontent">
+        <div class="article">
+          <img src="..\assets\base22.jpg" />
+          <div class="articletext">
+            <h2>Base22</h2>
+            <p>Evaluation of each dog using specialists who determine the best training that will help you friend be a better family member.</p>
+            <a class="read-more" href="https://www.techelevator.com/">
+              <h3>LEARN MORE</h3>
+            </a>
+          </div>
+        </div>
+        <div class="article">
+          <img src="..\assets\techelevator.jpg" />
+          <div class="articletext">
+            <h2>Tech Elevator</h2>
+            <p>This webpage brought to you in part by Tech Elevator, the country's newest premier coding bootcamp!</p>
+            <a class="read-more" href="#" target="_blank">
+              <h3>LEARN MORE</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -58,19 +72,18 @@ export default {
       this.activeTab = number
     }
   }
-
 }
 </script>
 
 <style lang="scss">
-$color-red: #EF3E42;
+$color-red: #ef3e42;
 $color-blue: #332982;
 $color-gray: #777;
-$font-family-primary: 'Open Sans Condensed', sans-serif;
-$font-family-secondary: 'Open Sans', sans-serif;
+$font-family-primary: "Open Sans Condensed", sans-serif;
+$font-family-secondary: "Open Sans", sans-serif;
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #programs {
@@ -94,7 +107,7 @@ a {
     width: 150px;
     float: left;
     margin-top: 10px;
-    }
+  }
   img {
     width: 150px;
     height: 150px;
@@ -103,7 +116,7 @@ a {
   .articletext {
     padding-left: 10px;
     width: 100%;
-     max-width: 500px;
+    max-width: 500px;
     h2 {
       padding-bottom: 10px;
     }
@@ -139,8 +152,49 @@ a {
 }
 
 @keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
-
+@media screen and (max-width: 400px) {
+  .article {
+    padding-bottom: 20px;
+    .read-more {
+      font-size: 12px;
+      padding: 2px;
+      width: 100px;
+      margin-top: 10px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .articletext {
+      padding-left: 10px;
+      width: 100%;
+      max-width: 500px;
+      h2 {
+        padding-bottom: 5px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+  }
+  .tabs {
+  margin-left: 25px;
+  margin-bottom: 5px;
+  .active {
+    border-bottom: solid 5px $color-blue;
+  }
+  button {
+    font-size: 12px;
+    padding: 10px 10px;
+  }
+}
+}
 </style>
