@@ -43,7 +43,7 @@ npm run serve
 
 
 ## Contributors
-* [Kolton Nay](https://www.linkedin.com/in/koltonnay/) Specialty: Vue.js
+* [Kolton Nay](https://www.linkedin.com/in/koltonnay/)
 
 ## Built With
 * [Visual Studio Code](https://code.visualstudio.com/) - Code Editor
