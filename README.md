@@ -4,7 +4,7 @@
 
 # Adoptme.Org - Landing Page for Pet Adoption Organization
 
-The FoxChat project is two things: the chatbot itself, designed around the Tech Elevator curriculum to help students get answers to questions they may have about academic topics as well as Pathway (interviews, job search, networking skills) topics, and the selling page, designed with expansion in mind and highlighting the ability to customize the chatbot to whatever business needs might find a chatbot useful. 
+The Adoptme.Org landing page was created as a kata-like front-end project for Base22 and has limited functionality beyond the visual. The project was built in vue.js and uses multiple componentd and views to render a modern-looking webpage for an adoption organiztion. The Testimonial of the Month section calls a fake API to get the video URLs, which are hard-coded to switch randomly each time the page is loaded. The video uses a responsive iFrame to maintain aspect ratio of the original videos. The primary focus of the production was ensuring quality look and feel on devices of all sizes, including tablets and mobile phones. To do this, I used @Media queries in the CSS to change sizes and flexbox columns/rows. The webpage was built with a "mobile-first" mentality, adding rules to adapt to larger screens when necessary.
 
 <img src="images/desktop-image.PNG" alt="Landing Page" height="500">
 
@@ -37,7 +37,7 @@ npm run serve
 6. Navigate to http://localhost:8080/ and start interacting with the Adoptme.Org webpage!
 
 ## Usage
-
+* See a random Adoption Testimonial from Youtube on each page load. 
 * View it on a small screen for a unique mobile experience.
 <img src="images/mobile-screenshot.PNG" alt="Mobile Example" height="400">
 
