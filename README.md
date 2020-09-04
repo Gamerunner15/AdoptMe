@@ -1,12 +1,12 @@
 <p align="center">
-<img src="adoptme/src/assets/logo.png" style="filter: invert(100%);" alt="Logo" height="100" align="center">
+<img src="adoptme/src/assets/logo.png" style="filter: brightness(0) saturate(100%);" alt="Logo" height="100" align="center">
 </p>
 
 # Adoptme.Org - Landing Page for Pet Adoption Organization
 
 The FoxChat project is two things: the chatbot itself, designed around the Tech Elevator curriculum to help students get answers to questions they may have about academic topics as well as Pathway (interviews, job search, networking skills) topics, and the selling page, designed with expansion in mind and highlighting the ability to customize the chatbot to whatever business needs might find a chatbot useful. 
 
-<img src="Images/FoxChat Landing Page.png" alt="Landing Page" height="500">
+<img src="adoptme/src/assets/desktop-image.png" alt="Landing Page" height="500">
 
 ## Getting Started
 
@@ -16,7 +16,7 @@ This website is not currently deployed and is not meant to be client-facing, but
 ### Prerequisites
 1. A JS/HTML editor such as [Visual Studio Code](https://code.visualstudio.com/)
 2. [Node.js / npm](https://www.npmjs.com/get-npm)
-3. [Vue.js](https://vuejs.org/) (Likely installs with the reswt of the project using NPM. If not:)
+3. [Vue.js](https://vuejs.org/) (Likely installs with the rest of the project using NPM. If not: )
 ```
 npm install @vue/cli
 ```
